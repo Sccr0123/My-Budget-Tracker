@@ -12,7 +12,7 @@ request.onsuccess = function (event) {
 	db = event.target.result;
 
 	if (navigator.onLine) {
-		sendTransaction();
+		uploadTransaction();
 	}
 };
 
@@ -29,7 +29,7 @@ function saveRecord(record) {
 	transactionObjectStore.add(record);
 }
 
-function sendTransaction() {
+function uploadTransaction() {
 	// open a transaction on your pending db
 	const transaction = db.transaction(["new_transaction"], "readwrite");
 
@@ -74,4 +74,4 @@ function sendTransaction() {
 }
 
 // listen for app coming back online
-window.addEventListener("online", sendTransaction);
+window.addEventListener("online", uploadTransaction);
