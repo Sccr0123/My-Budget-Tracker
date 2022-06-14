@@ -44,7 +44,7 @@
 	"name": "Budget Tracker",
 	"short_name": "Budget",
 	"display": "standalone",
-	"start_url": "../index.html",
+	"start_url": "./index.html",
 	"description": "An app that allows you to track your budget.",
 	"background_color": "#01579b",
 	"theme_color": "#ffffff"
